@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Streaming de Áudio</title>
+</head>
+<body>
+    <h2>Streaming: {{ filename }}</h2>
+    <audio controls>
+        <source src="{{ url_for('serve_file', filename=filename) }}" type="audio/wav">
+        Your browser does not support the audio tag.
+    </audio>
+    <br>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
